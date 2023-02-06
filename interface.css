@@ -1,0 +1,37 @@
+body {
+	background-color: #003319;
+	color: #33ff99;
+	text-align: center;
+	font-size:14px
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+button, div {
+  vertical-align:top;
+  display:inline-block;
+}
+div {
+	margin:24px
+}
+button {
+	width:180px;
+	height:30px;
+	background-color:#006633;
+	color: #33ff99;
+	border-style:solid;
+	border-width:2px;
+	border-color:#339966;
+	border-radius:4px;
+}
+.tab {
+	width:200px;
+	height:35px;
+	font-size:18px
+}
+.subtab {
+	width:150px;
+	height:25px;
+	font-size:12px
+}

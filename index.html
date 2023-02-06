@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="interface.css" />                                 <!-- Internally embeds CSS -->
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="new.css" />
+    <script src="main.js"></script>
+    <title>Z Points</title>
+  </head>
+  <body>
+		<div style="width:24vw;height:50px;display:none"></div>
+		<div style="width:24vw;height:50px"><span style="font-size:25px" id="exponentList"></span><br><span style="font-size:12px" id="exponentsPerSec"></span></div>
+		<div style="width:24vw;height:50px;display:none" id="overflowTop"><span style="font-size:20px" id="spanOverflowPoints"></span></div>
+		<br>
+    <nav id="globalNav">
+      <button class="tab" onclick="tab(0);">Exponents</button>
+      <button class="tab" onclick="tab(1);" id="tab1button" style="display:none">Overflow</button>
+			<br>
+			<button onclick="increment();">Gain 1 ^0</button>
+      <button id="prestigebutton" onclick="prestige();" style="display:none"></button>
+		</nav>
+    <hr>
+		<div id="tab0">
+			<div id="timeUpgradeDiv">
+				<p>Your time multiplier to all dimensions is <span id="spanTickspeed"></span> (×<span id="spanTickspeedMult"></span> per upgrade)<br>You have <span id="spanTimeUpgrades"></span> time upgrades</p>
+				<button id="buttonTickspeed" onClick="buySingleTimeUpgrade()"></button>
+				<button onClick="buyMaxTickspeed()">Buy max time upgrades</button>
+			</div>
+			<div id="quasarDiv" style="width:400px">
+				<p>You have <span id="spanQuasars"></span> quasars. Each quasar makes time upgrades <span id="spanQuasarEffect"></span>% stronger</p>
+				<button id="gainQuasar" onClick="gainQuasar()"></button>
+			</div>
+			<br>
+			<button onClick="buyMaxDimensions();buyMaxTickspeed()">Buy Max</button>
+			<table id="dimensionTable"></table>
+    </div>
+		<div id="tab1" style="display:none">
+			<nav id="overflowNav">
+				<button class="subtab prestigetab" onClick="subtab('prestige',1)">Upgrades</button>
+			</nav><br>
+			<div id="prestigetab0" style="display:none">
+				<p>The exponent ^256 is too large to store in this universe.</p>
+				<button onClick="overflow();tab(1);subtab('prestige',1)" style="width:400px;height:150px;font-size:24px">This will reset all previous progress, but you will gain 1 Overflow Point</button>
+			</div>
+			<div id="prestigetab1">
+				Autobuyer Dimensions coming soon!
+			</div>
+		</div>
+    <script type="text/javascript" src="break_eternity_alemaninc.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
